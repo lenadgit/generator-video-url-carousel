@@ -9,6 +9,6 @@ const Input = styled.input`
  border-radius: 5px;
 `;
 
-export default function Input(props) {
-  return <input type = "text" />;
+export default function InputField(props) {
+  return <Input type = "text" />;
 }

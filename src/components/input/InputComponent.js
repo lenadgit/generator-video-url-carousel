@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Input from "src/components/helpers/Input";
+import InputField from './components/helpers/Input';
 //import { ModalProvider } from "../../../../context/ModalContext";
 
 export default function InputComponent(props) {
@@ -9,7 +9,7 @@ export default function InputComponent(props) {
     return (
     <div>
         <h1>Put your URL</h1>
-        <Input />
+        <InputField />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import InputComponent from '../../../InputComponent';
+import InputComponent from './components/input/InputComponent';
 
 function App() {
   return (
