@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import InputField from './components/helpers/Input';
+import InputField from '../../components/helpers/Input';
 //import { ModalProvider } from "../../../../context/ModalContext";
 
 export default function InputComponent(props) {

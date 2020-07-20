@@ -10,5 +10,5 @@ const Input = styled.input`
 `;
 
 export default function InputField(props) {
-  return <Input type = "text" />;
+  return <Input type = "text">111</Input>;
 }
