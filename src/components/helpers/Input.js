@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Input = styled.input`
  background: #E5E5E5;
- width: 370px;
+ width: 100%;
  height: 0px;
  padding: 28px;
  border-radius: 5px;
