@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import '../../App.css';
 import InputField from '../../components/helpers/Input';
 import Btn from '../../components/helpers/Button';
 
@@ -10,6 +11,14 @@ const ButtonsWrapper = styled.div`
   margin-top: 23px;
 `;
 
+const GrayButton = styled(Btn)`
+  background: #636663;
+`;
+const GreenButton = styled(Btn)`
+  background: #48ED39;
+  width: 180px;
+`;
+
 export default function InputComponent(props) {
   const [] = useState(null);
   
@@ -18,8 +27,8 @@ export default function InputComponent(props) {
         <h1>Put your URL</h1>
         <InputField />
         <ButtonsWrapper>
-        <Btn text="Add +"></Btn>
-          <Btn text = "Generate"></Btn>
+        <GrayButton text="Add +"></GrayButton>
+          <GreenButton text = "Generate"></GreenButton>
         </ButtonsWrapper>
     </div>
   );

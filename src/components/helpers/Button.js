@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
- background: grey;
+ /*background: papayawhip;*/
  height: 0px;
  padding: 12px 20px 28px 20px;
  vertical-align: middle;
