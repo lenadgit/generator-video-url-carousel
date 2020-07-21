@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
- /*background: papayawhip;*/
+ background: ${props => props.background};
+ width: ${props => props.width};
  height: 0px;
  padding: 12px 20px 28px 20px;
  vertical-align: middle;
@@ -15,6 +16,6 @@ const Button = styled.button`
 `;
 
 export default function Btn(props) {
-    const { text } = props;
-return <Button>{text}</Button>;
+    const { text, background, width } = props;
+return <Button background={background} width = {width}>{text}</Button>;
 }

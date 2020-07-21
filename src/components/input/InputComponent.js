@@ -11,14 +11,6 @@ const ButtonsWrapper = styled.div`
   margin-top: 23px;
 `;
 
-const GrayButton = styled(Btn)`
-  background: #636663;
-`;
-const GreenButton = styled(Btn)`
-  background: #48ED39;
-  width: 180px;
-`;
-
 export default function InputComponent(props) {
   const [] = useState(null);
   
@@ -27,8 +19,8 @@ export default function InputComponent(props) {
         <h1>Put your URL</h1>
         <InputField />
         <ButtonsWrapper>
-        <GrayButton text="Add +"></GrayButton>
-          <GreenButton text = "Generate"></GreenButton>
+          <Btn text="Add +" background="#636663"></Btn>
+          <Btn text = "Generate" background="#48ED39" width = "180px"></Btn>
         </ButtonsWrapper>
     </div>
   );
