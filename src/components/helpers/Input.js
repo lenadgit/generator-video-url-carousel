@@ -13,5 +13,6 @@ const Input = styled.input`
 `;
 
 export default function InputField(props) {
-  return <Input type = "text"/>;
+  const { value, id } = props;
+  return <Input type = "text" />;
 }
