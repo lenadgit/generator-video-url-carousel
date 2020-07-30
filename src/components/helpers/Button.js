@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 //import InputField from '../../components/input/InputComponent';
-
 const Button = styled.button`
  background: ${props => props.background};
  width: ${props => props.width};
@@ -15,13 +14,7 @@ const Button = styled.button`
  margin-right: 14px;
  color: #ffffff;
 `;
-
 export default function Btn(props) {
     const { text, background, width } = props;
-    const handleClick = (e) => {
-        //const {text} = props;
-          console.log('setNewLink');
-          setNewLink(e.target.value);
-        };
-return <Button background={background} width = {width} onClick={handleClick}>{text}</Button>;
+return <Button background={background} width = {width} onClick={props.onClick}>{text}</Button>;
 }
