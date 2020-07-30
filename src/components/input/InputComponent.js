@@ -15,19 +15,12 @@ const ButtonsWrapper = styled.div`
 export default function InputComponent(props) {
   const [newLink, setNewLink] = useState('');
 
-  const handleClick = (e) => {
-  const {text} = props;
-    console.log('setNewLink');
-    setNewLink(e.target.value);
-  };
-
- 
     return (
     <div>
         <h1>Put your URL</h1>      
         <InputField value={newLink} onChange={(e) => setNewLink(e.target.value)}/>
         <ButtonsWrapper>
-        <Btn text="Add +" background="#636663" type = "button"  onClick={props.handleClick}></Btn>
+        <Btn text="Add +" background="#636663" type = "button" ></Btn>
           <Btn text = "Generate" background="#48ED39" width = "180px"></Btn>
         </ButtonsWrapper>        
     </div>
