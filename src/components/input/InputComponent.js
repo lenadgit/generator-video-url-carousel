@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import '../../App.css';
+import '../../App.scss';
 import InputField from '../../components/helpers/Input';
 import Btn from '../../components/helpers/Button';
 import ReadyUrls from './ReadyUrlsComponent';
@@ -21,7 +21,7 @@ export default function InputComponent(props) {
         <h1>Put your URL</h1>      
         <InputField value={newLink} onChange={(e) => setNewLink(e.target.value)}/>
         <ButtonsWrapper>
-        <Btn text="Add +" background="#636663" type = "button" onClick={handleClick}></Btn>
+        <Btn text="Add +" background="$main-grey" type = "button" onClick={handleClick}></Btn>
           <Btn text = "Generate" background="#48ED39" width = "180px"></Btn>
         </ButtonsWrapper>        
     </div>

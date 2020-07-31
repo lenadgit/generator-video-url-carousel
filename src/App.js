@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import InputComponent from './components/input/InputComponent';
 import ReadyUrls from './components/input/ReadyUrlsComponent';
 
