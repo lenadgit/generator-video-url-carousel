@@ -10,24 +10,42 @@ const ButtonsWrapper = styled.div`
   margin-top: 23px;
 `;
 export default function InputComponent(props) {
-  const [newLink, setNewLink] = useState('');
-    const handleClick = (e) => {
-          //console.log('setNewLink');
-          console.log(setNewLink(e.target.value));
-          const insertValue = setNewLink(e.target.value);
-          insertValue.innerHTML = "<p></p>";
-        };
+  const [newLink, setNewLink] = useState([
+    { text: "Learn about React" },
+    { text: "Meet friend for lunch" },
+    { text: "Build really cool todo app" }
+  ]);
+
+  function CreateLink({ addLink }) {
+  const [value, setValue] = useState("");
+
+  const handleClick = e => {
+    e.preventDefault();
+    if (!value) return;
+
+    addLink(value);
+    setValue("");
+}
+  
     return (
     <div>
         <h1>Put your URL</h1>      
-        <InputField value={newLink} onChange={(e) => setNewLink(e.target.value)}/>
+        <InputField {e => setValue(e.target.value)}
+        />
         <ButtonsWrapper>
         <Btn text="Add +" background="#636663" type = "button" onClick={handleClick}></Btn>
           <Btn text = "Generate" background="#48ED39" width = "180px"></Btn>
         </ButtonsWrapper>
-        <React.Fragment>
-    {/*{insertValue}*/}
-        </React.Fragment>        
+        <div >
+        {newLink.map((newLink, index) => (
+        <Todo
+          key={index}
+          index={index}
+          newLink={newLink}
+        />
+      ))}
+        </div>        
     </div>
   );
+}
 }
